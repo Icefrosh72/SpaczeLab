@@ -15,7 +15,22 @@ const FeatureSection = () => {
             </span>
           </h2>
         </div>
-        <div className="flex "></div>
+        <div className="flex flex-wrap mt-10 lg:mt-20">
+          {features.map((features, index) => (
+            <div key={index} className="w-full sm:1/2 lg:w-1/3">
+              <div className="flex">
+                <div className="flex mx-6 h-10 w-10 p-2 bg-neutral-900 text-purple-700 jsutify-center items-center rounded-full">
+                  {features.icon}
+                </div>
+
+                <div>
+                  <h5 className="mt-1 mb-6 text-xl">{features.text}</h5>
+                  <p className="text-md p-2 mb-20 text-neutral-500">{features.description}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </>
   );

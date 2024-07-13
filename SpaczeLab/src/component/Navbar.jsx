@@ -3,6 +3,7 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import logo from "../assets/profile-pictures/spacze-logo.png";
 import { navItems } from "../constants";
+// import { link } from "react-router-dom"
 
 const Navbar = () => {
     const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
@@ -27,7 +28,7 @@ const Navbar = () => {
           </ul>
 
           <div className="hidden lg:flex justify-center space-x-12 items-center">
-            <a href="#" className="py-2 px-3 border rounded-md">
+            <a href="./innerPages/login.jsx" className="py-2 px-3 border rounded-md">
               Sign In
             </a>
             <a
@@ -54,7 +55,9 @@ const Navbar = () => {
                 </ul>
                 <div className="flex space-x-6">
                     <a href="#" className="py-2 px-3 border rounded-md">
+                      {/* <Link to ="./innerPages/login.jsx"> */}
                         Sign Up
+                      {/* </Link> */}
                     </a>
                     <a href="#" className="py-2 px-3 rounded-md bg-gradient-to-r from-purple-500 to-blue-800">
                         Create an account
